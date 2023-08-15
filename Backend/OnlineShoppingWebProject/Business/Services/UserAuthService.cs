@@ -1,6 +1,10 @@
 ﻿using AutoMapper;
+<<<<<<< HEAD
 using Business.Dto.Auth;
 using Business.Dto.User;
+=======
+using Business.Dto;
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
 using Business.Result;
 using Business.TokenHelper;
 using Business.Util;
@@ -17,11 +21,17 @@ namespace Business.Services
 
 		private IMapper _mapper;
 
+<<<<<<< HEAD
 		private IUserHelper userHelper;
 
 		private IAuthHelper authHelper = new AuthHelper();
 
 		private IFiledValidationHelper validationHelper = new FieldValidationHelper();
+=======
+		private IAuthHelper authHelper = new AuthHelper();
+
+		private IUserHelper userHelper;
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
 
 		public UserAuthService(IUserTokenIssuer userTokenIssuer, IUnitOfWork unitOfWork, IMapper mapper)
 		{
@@ -69,6 +79,7 @@ namespace Business.Services
 		{
 			IServiceOperationResult operationResult;
 
+<<<<<<< HEAD
 			if (validationHelper.AreStringPropsNullOrEmpty(registerDto))
 			{
 				operationResult = new ServiceOperationResult(false, ServiceOperationErrorCode.BadRequest, "Fields can not be left emtpy!");
@@ -80,6 +91,12 @@ namespace Business.Services
 				userHelper.FindUserByEmail(registerDto.Email) != null)
 			{
 				operationResult = new ServiceOperationResult(false, ServiceOperationErrorCode.Conflict, "User with a given username or email already exists!");
+=======
+			if (userHelper.FindUserByUsername(registerDto.Username) != null ||
+				userHelper.FindUserByEmail(registerDto.Email) != null)
+			{
+				operationResult = new ServiceOperationResult(false, ServiceOperationErrorCode.Conflict, "User already exists!");
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
 
 				return operationResult;
 			}

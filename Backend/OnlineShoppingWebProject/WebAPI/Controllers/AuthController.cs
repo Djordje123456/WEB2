@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿using Business.Dto.Auth;
+=======
+﻿using Business.Dto;
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
 using Business.Result;
 using Business.Services;
 using Microsoft.AspNetCore.Http;
@@ -33,7 +37,11 @@ namespace WebAPI.Controllers
 
 				return Ok(operationResult.Dto);
 			}
+<<<<<<< HEAD
 			catch (Exception)
+=======
+			catch (Exception e)
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
 			{
 				return StatusCode(StatusCodes.Status500InternalServerError);
 			}
@@ -60,7 +68,11 @@ namespace WebAPI.Controllers
 
 				return Ok();
 			}
+<<<<<<< HEAD
 			catch (Exception)
+=======
+			catch (Exception e)
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
 			{
 				return StatusCode(StatusCodes.Status500InternalServerError);
 			}

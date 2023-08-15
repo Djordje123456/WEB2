@@ -1,7 +1,10 @@
 ﻿using Data.Context;
 using Data.Models;
+<<<<<<< HEAD
 using System.Collections.Generic;
 using System.Linq;
+=======
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
 
 namespace Data.Repository
 {
@@ -10,6 +13,7 @@ namespace Data.Repository
 		public ArticleRepository(OnlineShopDbContext context) : base(context)
 		{
 		}
+<<<<<<< HEAD
 
 		public List<Article> GetAllArticlesFromSeller(long id)
 		{
@@ -17,5 +21,7 @@ namespace Data.Repository
 
 			return articles;
 		} 
+=======
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
 	}
 }

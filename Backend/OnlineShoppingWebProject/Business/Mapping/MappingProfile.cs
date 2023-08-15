@@ -1,6 +1,10 @@
 ﻿using AutoMapper;
+<<<<<<< HEAD
 using Business.Dto.ArticleDto;
 using Business.Dto.Auth;
+=======
+using Business.Dto;
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
 using Business.Dto.User;
 using Data.Models;
 
@@ -13,8 +17,11 @@ namespace Business.Mapping
 			MapAuth();
 
 			MapUser();
+<<<<<<< HEAD
 
 			MapArticle();
+=======
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
 		}
 
 		public void MapAuth()
@@ -46,6 +53,7 @@ namespace Business.Mapping
 
 			CreateMap<Seller, UserInfoDto>().ReverseMap();
 		}
+<<<<<<< HEAD
 
 		public void MapArticle()
 		{
@@ -55,5 +63,7 @@ namespace Business.Mapping
 
 			CreateMap<Article, NewArticleDto>().ReverseMap();
 		}
+=======
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
 	}
 }

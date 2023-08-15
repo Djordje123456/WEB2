@@ -3,10 +3,13 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+<<<<<<< HEAD
 # My ignores
 ArticleImages/
 ProfileImages/
 
+=======
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
 # User-specific files
 *.rsuser
 *.suo

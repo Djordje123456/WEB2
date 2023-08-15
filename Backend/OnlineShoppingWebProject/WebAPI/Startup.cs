@@ -15,6 +15,10 @@ using Microsoft.OpenApi.Models;
 using System.Text;
 using Business.Services;
 using Data.UnitOfWork;
+<<<<<<< HEAD
+=======
+using Business.Services.Interfaces;
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
 
 namespace WebAPI
 {
@@ -180,8 +184,11 @@ namespace WebAPI
 			services.AddScoped<IUserAuthService, UserAuthService>();
 
 			services.AddScoped<IUserService, UserService>();
+<<<<<<< HEAD
 
 			services.AddScoped<ISellerService, SellerService>();
+=======
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
 		}
 	}
 }

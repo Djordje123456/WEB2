@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 ﻿using Business.Dto.User;
 using Business.TokenHelper;
 using Data.Models;
+=======
+﻿using Data.Models;
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
 using Data.UnitOfWork;
 using Microsoft.AspNetCore.Http;
 using System.IO;
@@ -9,7 +13,11 @@ namespace Business.Util
 {
 	public class UserHelper : IUserHelper
 	{
+<<<<<<< HEAD
 		private const string profileImageRelativePath = "../ProfileImages";
+=======
+		private readonly string profileImageRelativePath = "../ProfileImages";
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
 
 		public string ProfileImagesRelativePath => profileImageRelativePath;
 
@@ -29,6 +37,10 @@ namespace Business.Util
 			else if (unitOfWork.CustomerRepository.FindFirst(x => x.Username == username) is Customer customer)
 			{
 				return customer;
+<<<<<<< HEAD
+=======
+
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
 			}
 			else if (unitOfWork.SellerRepository.FindFirst(x => x.Username == username) is Seller seller)
 			{
@@ -38,6 +50,28 @@ namespace Business.Util
 			return null;
 		}
 
+<<<<<<< HEAD
+=======
+		public IUser FindById(long id)
+		{
+			if (unitOfWork.AdminRepository.FindFirst(x => x.Id == id) is Admin admin)
+			{
+				return admin;
+			}
+			else if (unitOfWork.CustomerRepository.FindFirst(x => x.Id == id) is Customer customer)
+			{
+				return customer;
+
+			}
+			else if (unitOfWork.SellerRepository.FindFirst(x => x.Id == id) is Seller seller)
+			{
+				return seller;
+			}
+
+			return null;
+		}
+
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
 		public IUser FindUserByEmail(string email)
 		{
 			if (unitOfWork.AdminRepository.FindFirst(x => x.Email == email) is Admin admin)
@@ -57,6 +91,7 @@ namespace Business.Util
 			return null;
 		}
 
+<<<<<<< HEAD
 		public IUser FindByIdAndRole(long id, string role)
 		{
 			if (role == UserType.Admin.ToString() && unitOfWork.AdminRepository.FindFirst(x => x.Id == id) is Admin admin)
@@ -85,18 +120,28 @@ namespace Business.Util
 			return user;
 		}
 
+=======
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
 		public void UpdateBasicUserData(IUser currentUser, IUser newUser)
 		{
 			if (!string.IsNullOrWhiteSpace(newUser.Address))
 			{
 				currentUser.Address = newUser.Address;
 			}
+<<<<<<< HEAD
 
+=======
+			
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
 			if (!string.IsNullOrWhiteSpace(newUser.Firstname))
 			{
 				currentUser.Firstname = newUser.Firstname;
 			}
+<<<<<<< HEAD
 
+=======
+			
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
 			if (!string.IsNullOrWhiteSpace(newUser.Lastname))
 			{
 				currentUser.Lastname = newUser.Lastname;
@@ -107,7 +152,11 @@ namespace Business.Util
 				currentUser.Username = newUser.Username;
 			}
 
+<<<<<<< HEAD
 			if (newUser.Birthdate != System.DateTime.MinValue)
+=======
+			if(newUser.Birthdate != System.DateTime.MinValue)
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
 			{
 				currentUser.Birthdate = newUser.Birthdate;
 			}
@@ -139,6 +188,7 @@ namespace Business.Util
 
 			return true;
 		}
+<<<<<<< HEAD
 
 		public byte[] GetProfileImage(string profileImageName)
 		{
@@ -176,5 +226,7 @@ namespace Business.Util
 
 			currentUser.ProfileImage = profileImageFileName;
 		}
+=======
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
 	}
 }

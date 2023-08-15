@@ -8,7 +8,11 @@ namespace Data.Repository
 {
 	public class GenericRepository<T> : IGenericRepository<T> where T : class
 	{
+<<<<<<< HEAD
 		protected readonly OnlineShopDbContext _context;
+=======
+		readonly OnlineShopDbContext _context;
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
 
 		public GenericRepository(OnlineShopDbContext context)
 		{

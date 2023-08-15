@@ -34,7 +34,11 @@ namespace Data.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
+<<<<<<< HEAD
                         .HasColumnType("nvarchar(max)");
+=======
+                        .HasColumnType("nvarchar(450)");
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
 
                     b.Property<string>("Firstname")
                         .HasColumnType("nvarchar(max)");
@@ -54,6 +58,12 @@ namespace Data.Migrations
 
                     b.HasKey("Id");
 
+<<<<<<< HEAD
+=======
+                    b.HasIndex("Email")
+                        .IsUnique();
+
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
                     b.HasIndex("Username")
                         .IsUnique();
 
@@ -104,7 +114,11 @@ namespace Data.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
+<<<<<<< HEAD
                         .HasColumnType("nvarchar(max)");
+=======
+                        .HasColumnType("nvarchar(450)");
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
 
                     b.Property<string>("Firstname")
                         .HasColumnType("nvarchar(max)");
@@ -124,6 +138,12 @@ namespace Data.Migrations
 
                     b.HasKey("Id");
 
+<<<<<<< HEAD
+=======
+                    b.HasIndex("Email")
+                        .IsUnique();
+
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
                     b.HasIndex("Username")
                         .IsUnique();
 
@@ -215,7 +235,11 @@ namespace Data.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
+<<<<<<< HEAD
                         .HasColumnType("nvarchar(max)");
+=======
+                        .HasColumnType("nvarchar(450)");
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
 
                     b.Property<string>("Firstname")
                         .HasColumnType("nvarchar(max)");
@@ -235,6 +259,12 @@ namespace Data.Migrations
 
                     b.HasKey("Id");
 
+<<<<<<< HEAD
+=======
+                    b.HasIndex("Email")
+                        .IsUnique();
+
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
                     b.HasIndex("Username")
                         .IsUnique();
 

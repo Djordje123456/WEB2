@@ -33,6 +33,7 @@ namespace Data.Repository.Util
 
 			return true;
 		}
+<<<<<<< HEAD
 
 		public bool AddUser(IUser user)
 		{
@@ -77,5 +78,7 @@ namespace Data.Repository.Util
 
 			return true;
 		}
+=======
+>>>>>>> a7aea91e0d5ffcffd71714a402ecc42b8df1b26f
 	}
 }
